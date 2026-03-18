@@ -1,6 +1,5 @@
 emailjs.init("OoQi5-N99oSSYjhh9");
 const form = document.getElementById('form');
-const confirm = document.getElementById('confirm');
 const link = document.getElementById('protected');
 const popupContainer = document.getElementById("popupContainer");
 
