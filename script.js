@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(() => {
         confirm.innerHTML = 'Request Sent';
         form.reset();
+        location.reload(); 
       }, (error) => {
         confirm.innerHTML = 'Error sending form';
         console.error(error);
