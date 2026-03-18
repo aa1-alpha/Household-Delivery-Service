@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(() => {
         confirm.innerHTML = 'Request Sent';
         form.reset();
-        window.location.href = "protected.html";
+        window.location.href = "After.html";
       }, (error) => {
         confirm.innerHTML = 'Error sending form';
         console.error(error);
