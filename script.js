@@ -2,17 +2,17 @@ emailjs.init("OoQi5-N99oSSYjhh9");
 const form = document.getElementById('form');
 const confirm = document.getElementById('confirm');
 const link = document.getElementById('protected');
-form.addEventListener("submit", function(event) {
-  event.preventDefault(); 
-  event.reset();
-  emailjs.sendForm(service_gtweha7, template_qgpow8e, form);
-  confirm.innerHTML='Request Sent';
-});
-const link = document.getElementById("protected");
 const popupContainer = document.getElementById("popupContainer");
 
 // Set your password here
 const correctPassword = "audviklikescoding"; // change this to your actual password
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); 
+  form.reset();
+  emailjs.sendForm("service_gtweha7", "template_qgpow8e", form);
+  confirm.innerHTML='Request Sent';
+});
 
 link.addEventListener("click", function(event) {
   event.preventDefault(); // stop default navigation
@@ -50,6 +50,5 @@ link.addEventListener("click", function(event) {
       popupContainer.innerHTML = "";
     }
   });
-});
 });
 
