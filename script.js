@@ -43,7 +43,7 @@ link.addEventListener("click", function(event) {
   btn.addEventListener("click", function() {
     if (input.value === correctPassword) {
       // Password correct → go to protected.html
-      window.location.href = "protected.html";
+      window.location.href = "Audvik.html";
     } else {
       alert("Incorrect password!");
       // Remove the pop-up
