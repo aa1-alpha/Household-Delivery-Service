@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         confirm.innerHTML = 'Request Sent';
         form.reset();
         // Redirect after submission
-        window.location.href = "https://aa1-alpha.github.io/After/";
+        window.location.href = "https://aa1-alpha.github.io/After/index.html";
       }, (error) => {
         confirm.innerHTML = 'Error sending form';
         console.error(error);
