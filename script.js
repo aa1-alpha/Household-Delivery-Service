@@ -9,7 +9,6 @@ const correctPassword = "audviklikescoding"; // change this to your actual passw
 form.addEventListener("submit", function(event) {
   event.preventDefault(); 
   emailjs.sendForm("service_gtweha7", "template_qgpow8e", form);
-  confirm.innerHTML='Request Sent';
   form.reset();
 });
 
