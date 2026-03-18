@@ -5,24 +5,36 @@ document.addEventListener("DOMContentLoaded", function() {
   const confirm = document.getElementById('confirm');
   const link = document.getElementById('protected');
   const popupContainer = document.getElementById("popupContainer");
+  const emailInput = document.getElementById('Email');
 
   const correctPassword = "audviklikescoding"; // your password
 
-  // Form submit
+  // --- Email validation ---
+  emailInput.addEventListener('input', () => {
+    const pattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+    if(!pattern.test(emailInput.value)) {
+      emailInput.setCustomValidity('Please enter a valid email (example: name@gmail.com)');
+    } else {
+      emailInput.setCustomValidity('');
+    }
+  });
+
+  // --- Form submit ---
   form.addEventListener("submit", function(event) {
     event.preventDefault();
     emailjs.sendForm("service_gtweha7", "template_qgpow8e", form)
       .then(() => {
         confirm.innerHTML = 'Request Sent';
         form.reset();
-        window.location.href = "https://aa1-alpha.github.io/After/";
+        // Redirect after submission
+        window.location.href = "https://aa1-alpha.github.io/After/index.html";
       }, (error) => {
         confirm.innerHTML = 'Error sending form';
         console.error(error);
       });
   });
 
-  // Password-protected link
+  // --- Password-protected link ---
   link.addEventListener("click", function(event) {
     event.preventDefault();
     popupContainer.innerHTML = "";
@@ -53,4 +65,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
-
