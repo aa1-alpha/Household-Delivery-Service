@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(() => {
         confirm.innerHTML = 'Request Sent';
         form.reset();
-        window.location.href = "After.html";
+        window.location.href = "https://aa1-alpha.github.io/After/index.html";
       }, (error) => {
         confirm.innerHTML = 'Error sending form';
         console.error(error);
